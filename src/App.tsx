@@ -295,11 +295,9 @@ const TESTIMONIALS = [
 
 // ─── UTILITIES ───────────────────────────────────────────────
 const fmtPrice = (n: number) => `₹${n}`;
+
 const fmtTime = (s: number) =>
-  `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(
-    2,
-    "0"
-  )}`;
+  `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
 const genCertId = () =>
   `CAI-${Date.now().toString(36).toUpperCase()}-${Math.random()
     .toString(36)
