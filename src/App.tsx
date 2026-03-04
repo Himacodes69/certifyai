@@ -313,9 +313,9 @@ const initials = (name: string) =>
     .toUpperCase();
     .slice(0, 2);
 
-function calcScore(answers, questions) {
+function calcScore(answers: any[], questions: any[]) {
   const correct = questions.reduce(
-    (n, q, i) => n + (answers[i] === q.correct ? 1 : 0),
+    (n: number, q: any, i: number) => n + (answers[i] === q.correct ? 1 : 0),
     0
   );
   return Math.round((correct / questions.length) * 100);
