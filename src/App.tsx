@@ -311,7 +311,7 @@ const initials = (name: string) =>
     .split(" ")
     .map((n) => n[0])
     .join("")
-    .toUpperCase();
+    .toUpperCase()
     .slice(0, 2);
 
 function calcScore(answers: any[], questions: any[]) {
