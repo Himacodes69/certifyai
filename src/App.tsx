@@ -8,7 +8,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
    ============================================================ */
 
 // ─── THEME ──────────────────────────────────────────────────
-const T = {
+const T = { 
   dark: {
     bg: "#0A0A0B",
     bg2: "#111114",
