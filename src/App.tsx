@@ -322,14 +322,18 @@ function calcScore(answers: any[], questions: any[]) {
   return Math.round((correct / questions.length) * 100);
 }
 
-function getQuestions(courseId, level) {
+function getQuestions(courseId: string, level: number) {
   const base = [...SAMPLE_QS];
+
   const count = LEVELS.find((l) => l.id === level)?.qs || 30;
-  while (base.length < count)
+
+  while (base.length < count) {
     base.push({
       ...SAMPLE_QS[base.length % SAMPLE_QS.length],
       q: `[Advanced] ${SAMPLE_QS[base.length % SAMPLE_QS.length].q}`,
     });
+  }
+
   return base.slice(0, count).sort(() => Math.random() - 0.5);
 }
 
