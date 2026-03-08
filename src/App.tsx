@@ -325,7 +325,9 @@ function calcScore(answers: any[], questions: any[]) {
 function getQuestions(courseId: string, level: number) {
   const base = [...SAMPLE_QS];
 
-  const count = LEVELS.find((l) => l.id === level)?.qs || 30;
+  const levelNum = Number(level);
+
+  const count = LEVELS.find((l) => l.id === levelNum)?.qs ?? 30;
 
   while (base.length < count) {
     base.push({
